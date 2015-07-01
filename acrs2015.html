@@ -33,11 +33,11 @@ $(document).on('submit','#signUpForm',function(e){
   
   user.signUp(null,{
 	  success:function(data){
-		  alert("註冊成功");
+		  alert("success");
 	  },
 	  error:function(data,error){
 		  console.log(error);
-	  	  alert("註冊失敗");
+	  	  alert("error");
 	  }
   });
   
