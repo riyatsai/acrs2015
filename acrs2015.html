@@ -1,0 +1,216 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="utf-8">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+	<script src="scrollIt/scrollIt.js" type="text/javascript"></script>
+	<script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script> 
+	<link rel="stylesheet" type="text/css" href="style.css">	
+</head>
+<script type="text/javascript">
+// Parse.initialize("dami0e5HI331SpeoPSZ8g99rQefvYeOEgbnfge7r", "5n1LNcQOvXzWsSMDfKuVqxbXXEQksYPrQMOj9kHy");
+Parse.initialize("fonWQnx1RDOHSy5emNfTb76JOHZtwe37lOJzRnnD","C93Pwv3bwZswToCw4ARTx20hp7ZYLnbNfVcFnQyp");
+
+$(function(){
+  $.scrollIt();
+  $('.carousel').carousel();
+});
+
+$(document).on('submit','#signUpForm',function(e){	
+  e.preventDefault();
+  var usr=$('#username').val();
+  var mail=$('#email').val();
+  var pwd=$("#password").val();
+
+  var user=new Parse.User();
+  user.set("username",usr);
+  user.set("email",mail);
+  user.set("password",pwd);
+  
+  user.signUp(null,{
+	  success:function(data){
+		  alert("註冊成功");
+	  },
+	  error:function(data,error){
+		  console.log(error);
+	  	  alert("註冊失敗");
+	  }
+  });
+  
+});  
+</script>
+
+<body class="homeBody">
+<header>
+	<ul>
+		<li style="margin-left:0%;"><a href="acrs2015.html">ACRS 2015</a></li>
+		<li class="icon"><a class="btn" data-scroll-nav="1">ABOUT EVENT</a></li>
+		<li class="icon"><a class="btn" data-scroll-nav="2">MAP</a></li>
+		<li class="icon"><a class="btn" data-scroll-nav="3">APPLICATION</a></li>
+	</ul>
+</header>
+
+<div class="hmoePic">
+	<div class="title">
+		<p>Advances in global DEMs and Tools</p>
+		<p>for assessing their quality</p>
+		<p>useability and interoperability</p>
+	</div>
+	<div class="og">
+		<p style="font-size:20px;color:#fff;">Organizers</p>
+		<div class="ogIcon"><img src="pic/isprs_logo.jpeg"></div>
+		<div class="ogIcon" style="	margin-left:20px;"><img src="pic/nccu_logo.png"></div>
+	</div>
+</div>
+</br>
+<!-- page1 -->
+<div class="blank" data-scroll-index="1"></div>
+
+<div class="contentLeft" style="margin-left:15%">
+<p style="font-size:30px;">About Event</p>
+<table class="table table-hover infTab">
+  <tr>
+  	<td style="font-weight: bold;">Title of the Event:</td>
+	<td>Advances in global DEMs and Tools for assessing their quality, useability and interoperability</td>
+  </tr>
+  <tr>
+  	<td style="font-weight: bold;">Proposed Dates of Event: </td>
+	<td>14-16 December 2015</td>
+  </tr>
+  <tr>
+    <td style="font-weight: bold;">Event Venue:</td>	  
+    <td>National Chengchi University, Taiwan</td>	  
+  </tr>
+  <tr>
+    <td style="font-weight: bold;">Expect Number of Participants:</td>	  
+    <td> 30-50</td>	  
+  </tr>
+  <tr>
+    <td style="font-weight: bold;">Themes of Event:</td>	  
+    <td> 
+	<p style="font-weight: bold;">Global DEMs</p>
+	SRTM 3.0 and NASADEM</br>
+	ASTER GDEM 3.0</br>
+	ALOS PRISM</br>
+	IRS-5P</br>
+	Airbus DS WorldDEM </br>
+</br>
+	<p style="font-weight: bold;">Assessment of Global DEMs</p>
+	Assessments of TanDEM-X i-DEM</br> 
+	CEOS-WGCV test site assessments</br>
+	Statistical tools for DEM QA</br>
+	Global assessments using altimetry</br>
+</br>
+	<p style="font-weight: bold;">Tools for working with global DEMs and exploring interoperability</p>
+	ESRI</br>
+	Google</br>
+	Bing</br>
+	Baidu</br>
+	Open source </br>
+</br>
+	<p style="font-weight: bold;">Working with Global DEMs</p>
+	Georadiometric correction </br>
+	CSIRO</br>
+	USGS</br>
+	US Hydrology</br>
+	GEO</br>
+	Disasters</br>
+</br>
+	<p style="font-weight: bold;">Hands on tutorials on iPads & Androids</p>
+	Open source </br>
+	Google</br>
+	ArcGis</br>
+	Apps</br>
+	
+	</td>	  
+  </tr>
+</table>
+</div>
+<hr>
+<!-- page2 -->
+<div class="blank" data-scroll-index="2"></div>
+<div class="contentLeft" style="margin-left:15%">
+	<p style="font-size:30px;">Map</p>
+	<p style="font-weight: bold;">From Taiwan Taoyuan International Airport to NCCU</p>
+	
+	<iframe src="http://www.dr2ooo.com/tools/maps/maps.php?zoom=16&width=500&height=266&ll=24.986272,-238.424186&ctrl=true&" width="500" height="266">
+	</iframe>
+	<div class="contentRight" style="width:400px;">
+		<p style="font-weight: bold;">By Taxi</p>
+		<p>There is a taxi pickup area by the Terminal Arrival area at Taiwan Taoyuan International Airport. Airport taxies provide 24-hour transportation services. For a one way trip from Taoyuan International Airport to Taipei City, the taxi cost falls in the range of $1,100 - 1,700 approximately, depending on the numbers of passengers, luggages, and the size of the car.</p>
+		<p>Terminal 1 Taxi Service Center's phone number:</br> +886-3-398-2832</p>
+		<p>Terminal 2 Taxi Service Center's phone number:</br> +886-3-398-3599</p>
+		
+	</div>
+</div>
+</br></br></br>
+<div>
+	<div class="contentLeft" style="width:500px;margin-left:15%">
+		<p style="font-weight: bold;">By Public Transportation></p>
+		<p>From the airport arrival area, take the airport bus to Zhongxiao Fuxing MRT Station. Then, take the MRT (Taipei Rapid Transit System) brown line, to MRT Taipei Zoo. Then, take the bus (#236, 237, 611, 282, BR11 , or BR6) across the street from MRT Taipei Zoo Station to NCCU. Total cost is about NT$200.</p>
+	</div>
+	<div class="contentRight" style="width:500px;">
+		<a href="http://www.nccu.edu.tw/uploads/asset/data/54edfcc875627509e09c0b00/06NCCU_Traffic_Map_en.jpg"><img src="http://www.nccu.edu.tw/uploads/asset/data/54edfcc875627509e09c0b00/06NCCU_Traffic_Map_en.jpg" style="width:400px;"></a>
+	</div>
+</div>
+<hr>
+</br>
+<!-- page3 -->
+<div class="blank" data-scroll-index="3"></div>
+
+<div class="contentLeft" style="width:550px;margin-left:35%;">
+	  <p style="font-size:30px;">Application</p>
+	  <form id="signUpForm" class="form-horizontal formPos">
+      <fieldset>
+      <div class="form-group">
+        <label class="col-md-2 control-label" for="username">Name</label>
+        <div class="col-md-6">
+        <input id="username" name="username" type="text" class="form-control input-md" required="">
+
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-2 control-label" for="email">Email</label>
+        <div class="col-md-6">
+        <input id="email" name="email" type="text" class="form-control input-md" required="">
+
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-2 control-label" for="password">Message</label>
+        <div class="col-md-6">
+          <input id="password" name="password"  class="form-control input-md" required="">
+
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-2 control-label" for="signUpBtn"></label>
+        <div class="col-md-6">
+          <button id="signUpBtn" name="signUpBtn" class="btn">Apply</button>
+        </div>
+      </div>
+      </fieldset>
+      </form>
+
+<div class="contentRight" style="height:250px;">
+	  <p style="font-size:30px;">Contact Us</p>
+	  <p>Name: Dr. Shih-Yuan Lin</p>
+	  <p>E-mail: syl@nccu.edu.tw</p>
+</div>
+
+</div>
+	  
+	  
+
+
+
+
+</body>
+</html>
